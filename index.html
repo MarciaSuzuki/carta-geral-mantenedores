@@ -486,6 +486,47 @@
         gap: 16px;
       }
 
+      .video {
+        margin-top: 22px;
+        padding: 22px;
+      }
+
+      .video-layout {
+        display: grid;
+        grid-template-columns: minmax(320px, 0.95fr) minmax(0, 1fr);
+        gap: 18px;
+        align-items: start;
+      }
+
+      .video-frame {
+        border-radius: 24px;
+        overflow: hidden;
+        border: 1px solid rgba(49, 65, 46, 0.08);
+        background: rgba(255, 255, 255, 0.8);
+        min-height: 610px;
+      }
+
+      .video-frame iframe {
+        width: 100%;
+        height: 100%;
+        min-height: 610px;
+        border: 0;
+        display: block;
+      }
+
+      .video-copy {
+        display: grid;
+        gap: 14px;
+        align-content: start;
+        padding: 4px 0;
+      }
+
+      .video-copy p {
+        color: var(--muted);
+        font-family: "Shema Serif", Georgia, serif;
+        line-height: 1.75;
+      }
+
       .closing-layout {
         display: grid;
         grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.9fr);
@@ -561,7 +602,8 @@
       @media (max-width: 980px) {
         .hero,
         .story-grid,
-        .gallery-layout {
+        .gallery-layout,
+        .video-layout {
           grid-template-columns: 1fr;
         }
 
@@ -606,6 +648,11 @@
         .figure-card {
           min-height: 330px;
         }
+
+        .video-frame,
+        .video-frame iframe {
+          min-height: 520px;
+        }
       }
 
       @media print {
@@ -627,6 +674,7 @@
         .metrics,
         .story,
         .gallery,
+        .video,
         .closing {
           box-shadow: none;
           break-inside: avoid;
@@ -645,6 +693,10 @@
 
         .print-url {
           display: inline;
+        }
+
+        .video {
+          display: none;
         }
       }
     </style>
@@ -977,6 +1029,56 @@
               <strong>Família</strong>
               <span>O cuidado e as orações de vocês também sustentam a nossa casa.</span>
             </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="video">
+        <div class="section-heading">
+          <h2>Vídeo destaque</h2>
+          <p>
+            Também quisemos incluir este clipe curto do Suzuki ensinando sobre
+            como a presença de Deus nos transforma.
+          </p>
+        </div>
+
+        <div class="video-layout">
+          <div class="video-frame">
+            <iframe
+              src="https://www.instagram.com/reel/DXSuXjcjY66/embed/captioned/"
+              title="Suzuki ensinando sobre a presença de Deus e transformação"
+              loading="lazy"
+              allowtransparency="true"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div class="video-copy">
+            <div class="mini-pills">
+              <span class="mini-pill">Instagram Reel</span>
+              <span class="mini-pill">Suzuki</span>
+              <span class="mini-pill">Presença de Deus</span>
+            </div>
+            <p>
+              Esse vídeo complementa bem o coração desta carta. Nele, o
+              <strong>Suzuki</strong> compartilha sobre a forma como a
+              <strong>presença de Deus nos transforma</strong>, algo que também
+              sustenta o nosso trabalho com tradução, discipulado e formação.
+            </p>
+            <p>
+              Se o vídeo não carregar dentro da página no seu navegador, ele
+              pode ser aberto diretamente no Instagram pelo link abaixo.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="button primary"
+                href="https://www.instagram.com/reel/DXSuXjcjY66/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA=="
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Abrir vídeo no Instagram
+              </a>
+            </div>
           </div>
         </div>
       </section>
